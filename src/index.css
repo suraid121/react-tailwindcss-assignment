@@ -4,5 +4,17 @@
   --font-Onest: "Onest", sans-serif;
 }
 @theme{
-  --color-primary:#f26922
+  --color-primary:#f26922;
+}
+@theme{
+  --color-NavLinks:#707079;
+}
+@theme{
+  --color-NavLinksActive: #08080A
+}
+@theme{
+  --color-NavBg:#F1F1F2;
+}
+@theme{
+  --color-NavLine:#E3E3E6;
 }
