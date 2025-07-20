@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './common-components/NavBar'
-import Button from './reuseable-components/Button'
+import Button from './reusable-components/Button'
 function App() {
 
 
