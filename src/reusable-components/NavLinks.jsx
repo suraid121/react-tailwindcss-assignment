@@ -9,7 +9,7 @@ const NavLinks = ({ className = "", onClick }) => {
           key={i}
           href={item.href || "#"}
           onClick={onClick}
-          className={cn("text-NavLinks hover:text-black transition font-medium", className)}
+          className={cn("text-mid-gray-text hover:text-dark-gray-text transition font-medium", className)}
         >
           {item.label}
         </a>

@@ -1,12 +1,15 @@
 import './App.css'
-import NavBar from './common-components/NavBar'
-import Button from './reusable-components/Button'
+import Dashboard from './Dashboard/Dashboard'
+import NavBar from './reusable-components/NavBar'
+
 function App() {
 
 
   return (
     <>
-      <NavBar/>
+
+<Dashboard></Dashboard>
+
     </>
   )
 }

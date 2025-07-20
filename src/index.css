@@ -1,20 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Slab:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-@theme{
-  --font-Onest: "Onest", sans-serif;
-}
-@theme{
-  --color-primary:#f26922;
-}
-@theme{
-  --color-NavLinks:#71717A;
-}
-@theme{
-  --color-NavLinksActive: #09090B;
-}
-@theme{
-  --color-NavBg:#F1F1F2;
-}
-@theme{
-  --color-NavLine:#E4E4E7;
+
+@theme {
+  --color-orange-primary: #f26922;       
+  --color-light-gray-bg: #FAFAFA;        
+  --color-mid-gray-text: #71717A;        
+  --color-dark-gray-text: #09090B;     
+  --color-soft-gray-nav-bg: #F1F1F2;    
+  --color-light-border: #E4E4E7;
+  --color-deep-dark: #18181B;
+  --color-chat-card-bg: #f4f4f5;  
+  --color-dark-gray-bg:#27272a;   
 }

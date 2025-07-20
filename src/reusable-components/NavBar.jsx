@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import NavLinks from "../reusable-components/NavLinks";
-import UserProfile from "../reusable-components/UserProfile";
-import  cn  from "../utilities/cn";
+import NavLinks from "./NavLinks";
+import UserProfile from "./UserProfile";
+import cn from "../utilities/cn";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const NavBar = () => {
   }, [isOpen]);
 
   return (
-    <header className="bg-NavBg pb-10 w-full">
+    <header className="bg-NavBg pb-2 w-full">
       <div className="max-w-screen-2xl mx-auto px-4 lg:px-10 py-4 flex items-center justify-between">
         {/* Logo */}
         <img src="/logo.svg" alt="logo" />
@@ -27,7 +27,7 @@ const NavBar = () => {
           <NavLinks />
         </nav>
 
-        {/* Notification + Profile + Hamburger */}
+        {/* Notification , Profile , Hamburger */}
         <div className="flex items-center gap-10">
           <div className="hidden md:flex items-center gap-4">
             <img src="/notification.svg" alt="notification" />

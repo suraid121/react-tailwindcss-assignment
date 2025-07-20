@@ -6,12 +6,11 @@ const UserProfile = ({ showEmail = true, className = "" }) => {
       <img
         src="/avatar.svg"
         alt="avatar"
-        className="w-9 h-9 rounded-full bg-yellow-300 p-[2px]"
       />
-      <div className="flex flex-col text-NavLinks leading-tight">
+      <div className="flex flex-col text-mid-gray-text  leading-tight">
         <span className="font-bold text-base">Usman Zafar</span>
         {showEmail && (
-          <span className="text-sm text-gray-500">usmanzafar@gmail.com</span>
+          <span className="text-sm font-medium">usmanzafar@gmail.com</span>
         )}
       </div>
     </div>
