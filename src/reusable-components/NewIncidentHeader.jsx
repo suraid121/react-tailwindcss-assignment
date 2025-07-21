@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const NewIncidentHeader = ({title , heading , progress}) => {
   return (
-    <section  className="flex md:flex-col flex-wrap items-center justify-between gap-6 px-6 py-10 bg-soft-gray-nav-bg w-screen ">
+    <section  className="flex md:flex-row flex-col flex-wrap items-baseline  md:items-center justify-between gap-6 px-6 py-10 bg-soft-gray-nav-bg w-screen ">
       
      
       <div className="flex items-center gap-4 min-w-[250px]">

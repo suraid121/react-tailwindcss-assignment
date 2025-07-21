@@ -1,6 +1,6 @@
 import './App.css'
-import Incidents from './Incidents/Incidents'
 import NewIncidentHeader from './reusable-components/NewIncidentHeader'
+import StepOne from './Incidents/StepOne'
 function App() {
 
 
@@ -8,6 +8,8 @@ function App() {
     <>
 
       <NewIncidentHeader/>
+      <StepOne></StepOne>
+
 
     </>
   )
