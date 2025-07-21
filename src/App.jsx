@@ -1,17 +1,12 @@
 import './App.css'
-import Dashboard from './Dashboard/Dashboard'
-import ChatBox from './reusable-components/ChatBox'
-import IncidentsCard from './common-components/IncidentsCard'
-
+import Incidents from './Incidents/Incidents'
 function App() {
 
 
   return (
     <>
 
-<Dashboard></Dashboard>
-<ChatBox/>
-<IncidentsCard></IncidentsCard>
+<Incidents></Incidents>
 
     </>
   )
