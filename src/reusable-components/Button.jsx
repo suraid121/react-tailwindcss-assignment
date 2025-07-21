@@ -4,7 +4,7 @@ function Button({ className, title }) {
   return (
     <button
       className={cn(
-        'px-4 py-2 rounded-md bg-orange-primary text-white font-medium text-sm whitespace-nowrap shadow-sm hover:bg-[#fb851f] transition cursor-pointer',
+        'px-8 py-3 rounded-md bg-orange-primary w-35 text-white font-medium text-sm whitespace-nowrap shadow-sm hover:bg-[#fb851f] transition cursor-pointer',
         className
       )}
     >
