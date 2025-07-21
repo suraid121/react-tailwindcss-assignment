@@ -8,7 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 Incidents-section
-NewIncidentHeader.jsx
 node_modules
 dist
 dist-ssr
