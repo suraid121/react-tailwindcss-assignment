@@ -17,7 +17,7 @@ const NavBar = () => {
   }, [isOpen]);
 
   return (
-    <header className="bg-NavBg pb-2 w-full">
+    <header className="bg-soft-gray-nav-bg pb-2 w-full">
       <div className="max-w-screen-2xl mx-auto px-4 lg:px-10 py-4 flex items-center justify-between">
         {/* Logo */}
         <img src="/logo.svg" alt="logo" />
@@ -65,7 +65,7 @@ const NavBar = () => {
       </div>
 
       {/* Bottom Line */}
-      <div className="bg-NavLine w-screen h-[2px]" />
+      <div className="bg-light-border w-full h-[2px]" />
 
       {/* Mobile Menu */}
       <div
@@ -77,7 +77,7 @@ const NavBar = () => {
       >
         <nav className="px-6 py-4 flex flex-col gap-4 text-base">
           <NavLinks />
-          <div className="pt-4 border-t-NavLine border-t-2 mt-4">
+          <div className="pt-4 border-t-light-border border-t-3 mt-4">
             <UserProfile />
           </div>
         </nav>

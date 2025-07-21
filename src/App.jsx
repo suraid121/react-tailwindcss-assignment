@@ -1,6 +1,7 @@
 import './App.css'
 import Dashboard from './Dashboard/Dashboard'
-import NavBar from './reusable-components/NavBar'
+import ChatBox from './reusable-components/ChatBox'
+import IncidentsCard from './common-components/IncidentsCard'
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
     <>
 
 <Dashboard></Dashboard>
+<ChatBox/>
+<IncidentsCard></IncidentsCard>
 
     </>
   )
