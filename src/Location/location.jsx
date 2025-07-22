@@ -7,6 +7,7 @@ const Location = () => {
     let year = Time.getFullYear();
     let date = Time.getDate();
     
+    
     const LocationData = [
         {
             src: '/building-1.svg',
