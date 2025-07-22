@@ -6,7 +6,7 @@ const IncidentsCard = () => {
             {IncidentsData.map((data, i) => (
                 <div
                     key={i}
-                    className="relative w-[280px] max-w-[340px] p-3 grow flex flex-col space-y-2 bg-white shadow rounded-xl mx-auto  xl:mx-1 "
+                    className="relative w-[280px] max-w-[340px] h-[400px] p-3 grow flex flex-col space-y-2 bg-white shadow rounded-xl mx-auto  xl:mx-1 "
                 >
                     <div className="relative">
                         {/* Image */}
@@ -21,7 +21,7 @@ const IncidentsCard = () => {
                             <img
                                 src="/blizzard-card.svg"
                                 alt="icon"
-                                className="w-4 h-4 object-contain"
+                                className="w-4 h-4 object-cover"
                             />
                             <span>Blizzard</span>
                         </div>

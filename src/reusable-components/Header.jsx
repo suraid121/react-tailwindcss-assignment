@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import Button from "../reusable-components/Button";
 
-const Header = ({title , heading}) => {
+const Header = ({Title , Heading , ButtonTitle , className , ButtonFun}) => {
   const [sortBy, setSortBy] = useState("Date modified");
   const [isOpen, setIsOpen] = useState(false);
   const options = ["Date modified", "Name", "Size"];
@@ -18,11 +18,11 @@ const Header = ({title , heading}) => {
   }, []);
 
   return (
-    <section className="flex items-center justify-between bg-soft-gray-nav-bg p-4 flex-col md:flex-row">
+    <section className="flex items-center justify-between bg-soft-gray-nav-bg px-8 py-4 flex-col md:flex-row">
   
       <div className="flex flex-col mb-2">
-        <span className="text-sm text-mid-gray-text">{title}</span>
-        <h3 className="text-xl font-bold text-dark-gray-text">{heading}</h3>
+        <span className="text-sm text-mid-gray-text">{Title}</span>
+        <h3 className="text-3xl font-bold text-dark-gray-text">{Heading}</h3>
       </div>
 
 
@@ -32,7 +32,7 @@ const Header = ({title , heading}) => {
           <input
             type="text"
             placeholder="Search incident"
-            className="pl-9 pr-4 py-2 rounded-md border border-light-border bg-light-gray-bg text-sm text-mid-gray-text placeholder:text-mid-gray-text shadow-sm focus:outline-none focus:ring-1 focus:ring-light-border"
+            className="pl-9 pr-4 py-3 rounded-md border border-light-border bg-light-gray-bg text-sm text-mid-gray-text placeholder:text-mid-gray-text shadow-sm focus:outline-none focus:ring-1 focus:ring-light-border"
           />
           <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-mid-gray-text">
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const Header = ({title , heading}) => {
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="px-4 py-2 rounded-md border border-light-border text-sm bg-light-gray-bg text-gray-700 hover:bg-gray-300 whitespace-nowrap shadow-sm cursor-pointer"
+            className="px-4 py-3 rounded-md border border-light-border text-sm bg-light-gray-bg text-gray-700 hover:bg-gray-300 whitespace-nowrap shadow-sm cursor-pointer"
           >
             Sort By: {sortBy}
           </button>
@@ -73,8 +73,8 @@ const Header = ({title , heading}) => {
           )}
         </div>
 
-        {/* Cypher AI Button */}
-        <Button title="Cypher AI"  />
+        
+        <Button title={ButtonTitle} className={className} ButtonFun={ButtonFun} />
       </div>
     </section>
   );

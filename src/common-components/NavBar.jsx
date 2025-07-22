@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import NavLinks from "./NavLinks";
-import UserProfile from "./UserProfile";
+import NavLinks from "../reusable-components/NavLinks";
+import UserProfile from "../reusable-components/UserProfile";
 import cn from "../utilities/cn";
 
 const NavBar = () => {
@@ -17,14 +17,15 @@ const NavBar = () => {
   }, [isOpen]);
 
   return (
-    <header className="bg-soft-gray-nav-bg pb-2 w-full">
+    <header className="bg-soft-gray-nav-bg pb-4 w-full">
       <div className="max-w-screen-2xl mx-auto px-4 lg:px-10 py-4 flex items-center justify-between">
         {/* Logo */}
         <img src="/logo.svg" alt="logo" />
 
         {/* Desktop Nav Links */}
         <nav className="hidden xl:flex items-center gap-6">
-          <NavLinks />
+          <NavLinks className={'underline-offset-[30px] decoration-2'}
+          />
         </nav>
 
         {/* Notification , Profile , Hamburger */}
@@ -75,8 +76,8 @@ const NavBar = () => {
           "overflow-hidden transition-all duration-300 ease-in-out xl:hidden bg-gray-100"
         )}
       >
-        <nav className="px-6 py-4 flex flex-col gap-4 text-base">
-          <NavLinks />
+        <nav className="px-6 py-4 flex flex-col gap-4 text-base ">
+          <NavLinks className={'underline-offset-3 decoration-[10px]'} />
           <div className="pt-4 border-t-light-border border-t-3 mt-4">
             <UserProfile />
           </div>

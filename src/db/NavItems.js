@@ -9,7 +9,7 @@
     },
         {
         label : "Location",
-        to : "/Locations"
+        to : "/Location"
     },
         {
         label : "Activities",

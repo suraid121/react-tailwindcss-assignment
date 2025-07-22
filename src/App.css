@@ -1,0 +1,6 @@
+.active {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    color: #09090B;
+    font-weight: 700;
+}

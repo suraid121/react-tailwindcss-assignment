@@ -1,15 +1,20 @@
 import NewIncidentQuestion from "../db/NewIncidentQuestion";
 import Button from "../reusable-components/Button";
+import { useNavigate } from 'react-router-dom'
 
 const StepOne = () => {
+    let Navigate = useNavigate()
+    const handleClick = () => {
+        Navigate("/Incidents/StepTwo")
+    }
     const steps = [1, 2, 3];
     return (
         <>
             <section className="space-y-6 max-w-lg mx-auto flex flex-col items-center py-15 ">
                 <h3 className="text-dark-gray-text font-bold text-3xl">Let’s get started</h3>
-                <p className="text-mid-gray-text max-w-[420px] font-light  text-justify">Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit gene</p>
+                <p className="text-mid-gray-text max-w-[450px] font-[400]  text-justify">Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit gene</p>
 
-                <div className="md:flex items-center justify-center  w-full max-w-md hidden   mx-auto">
+                <div className="md:flex items-center justify-center  w-full max-w-[1280px] hidden   mx-auto">
                     {steps.map((step, index) => (
                         <div key={index} className={`flex items-center ${index < steps.length - 1 ? "flex-1" : ""}`}>
                             <div className="w-6 h-6 bg-gray-300 rounded-full z-10"></div>
@@ -33,9 +38,10 @@ const StepOne = () => {
                         ))
                     }
                 </div>
-                <Button title={'Get Started'} className={'mt-18'} ></Button>
+                <Button title={'Get Started'} className={'mt-18'} ButtonFun={handleClick} ></Button>
             </section>
         </>
     )
 };
 export default StepOne;
+

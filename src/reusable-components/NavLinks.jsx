@@ -1,18 +1,18 @@
 import  cn  from "../utilities/cn";
 import NavItems from "../db/NavItems";
+import { NavLink } from "react-router-dom";
 
-const NavLinks = ({ className = "", onClick }) => {
+const NavLinks = ({ className  }) => {
   return (
     <>
       {NavItems.map((item, i) => (
-        <a
+        <NavLink
           key={i}
-          href={item.href || "#"}
-          onClick={onClick}
-          className={cn("text-mid-gray-text hover:text-dark-gray-text transition font-medium", className)}
+          to={item.to}         
+          className={cn("text-mid-gray-text hover:text-dark-gray-text   transition  font-medium cursor-pointer inline", className)}
         >
           {item.label}
-        </a>
+        </NavLink>
       ))}
     </>
   );

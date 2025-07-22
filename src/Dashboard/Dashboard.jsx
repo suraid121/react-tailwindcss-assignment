@@ -1,9 +1,12 @@
-import HeaderSection from '../common-components/HeaderSection'
-
-const Dashboard = ()=>{
+import Header from '../reusable-components/Header';
+import IncidentsCard from '../common-components/IncidentsCard';
+import ChatBox from '../reusable-components/ChatBox';
+const Dashboard = () => {
     return (
         <>
-        <HeaderSection title={'Welcome Back'} heading={'Dashboard'}  />
+            <Header Title={'Welcome back'} Heading={'Dashboard'} ButtonTitle={'Cypher AI'}/>
+            <IncidentsCard />
+            <ChatBox/>
         </>
     )
 };

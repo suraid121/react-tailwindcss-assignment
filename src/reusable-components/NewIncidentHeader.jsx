@@ -1,12 +1,17 @@
 import Button from "./Button";
-
-const NewIncidentHeader = ({title , heading , progress}) => {
+import { useNavigate } from "react-router-dom";
+const NewIncidentHeader = ({ title, heading, progress , ButtonFun , ButtonTitle}) => {
+  let a = (progress + '%')
+      let Navigate = useNavigate()
+    const handleClick = () => {
+        Navigate("/Incidents")
+    }
   return (
-    <section  className="flex md:flex-row flex-col flex-wrap items-baseline  md:items-center justify-between gap-6 px-6 py-10 bg-soft-gray-nav-bg w-screen ">
-      
-     
+    <section className="flex md:flex-row flex-col flex-wrap items-baseline  md:items-center justify-between gap-6 px-6 py-10 bg-soft-gray-nav-bg  ">
+
+
       <div className="flex items-center gap-4 min-w-[250px]">
-        <button className="bg-light-gray-bg p-3 rounded-full drop-shadow-2xl/40 cursor-pointer">
+        <button onClick={handleClick} className="bg-light-gray-bg p-3 rounded-full  border-1 border-gray-300 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,34 +31,35 @@ const NewIncidentHeader = ({title , heading , progress}) => {
         </div>
       </div>
 
-<section
-  style={{
-    width: {progress},
-    height: '6px',
-    backgroundColor: '#E5E7EB',
-    borderRadius: '200px',
-    overflow: 'hidden',
-  }}
->
-  <div
-    style={{
-      width: '33%', 
-      height: '100%',
-      backgroundColor: '#F26922',
-      borderRadius: '200px',
-      transition: 'width 0.3s ease-in-out',
-    }}
-  ></div>
-</section>
+      <section
+        style={{
+          width: '50vw',
+          height: '6px',
+          backgroundColor: '#E5E7EB',
+          borderRadius: '200px',
+          overflow: 'hidden',
+        }}
+      >
+        <div
+          style={{
+            width: a,
+            height: '100%',
+            backgroundColor: '#F26922',
+            borderRadius: '200px',
+            transition: 'width 0.3s ease-in-out',
+          }}
+        ></div>
+      </section>
 
 
-     
+
       <div className="flex items-center gap-3 min-w-[200px] justify-end">
         <Button
           title="Back"
-          className="bg-light-gray-bg text-mid-gray-text border border-light-border "
+          className="bg-light-gray-bg text-mid-gray-text border hover:text-white border-light-border "
+          ButtonFun={ ()=> window.history.back()}
         />
-        <Button title="Next Step" />
+        <Button title={ButtonTitle} ButtonFun={ButtonFun} />
       </div>
     </section>
   );

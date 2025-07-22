@@ -1,10 +1,15 @@
-import HeaderSection from '../common-components/HeaderSection'
+import Header from '../reusable-components/Header';
 import IncidentsCard from '../common-components/IncidentsCard'
-const Incidents = ()=>{
-    return(
+import { useNavigate } from 'react-router-dom'
+const Incidents = () => {
+    let Navigate = useNavigate()
+    const handleClick = () => {
+        Navigate("/Incidents/StepOne")
+    }
+    return (
         <>
-                <HeaderSection title={'Home-Incidents'} heading={'Incidents'}  />
-                <IncidentsCard/>
+            <Header Title={'Home-Incidents'} Heading={'Incidents'} ButtonTitle={'+ New Incident'} className={'w-40 font-bold'} ButtonFun={handleClick} />
+            <IncidentsCard />
         </>
 
     )

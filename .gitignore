@@ -6,12 +6,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
-Incidents-section
 node_modules
 dist
 dist-ssr
 *.local
+ChatBox
+Activities
+Documents
+Location
+vercel.json
 
 # Editor directories and files
 .vscode/*

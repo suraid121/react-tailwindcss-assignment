@@ -1,12 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import cn from '../utilities/cn.js';
 
-const ChatBox = ({
-  mode = 'compact',
-  height = 'max-h-80',
-  width = 'w-[340px]',
-  position = 'fixed bottom-[120px] right-8',
-}) => {
+const ChatBox = () => {
   const [visible, setVisible] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([]);
@@ -33,8 +28,7 @@ const ChatBox = ({
 
   return (
     <>
-      {/* Open Button (Compact Mode Only) */}
-      {!visible && mode === 'compact' && (
+      {!visible && (
         <button
           onClick={() => setVisible(true)}
           className="fixed bottom-8 right-8 bg-orange-500 p-4 rounded-full shadow-lg z-40"
@@ -43,8 +37,7 @@ const ChatBox = ({
         </button>
       )}
 
-      {/* Close Button (Compact Mode Only) */}
-      {visible && mode === 'compact' && (
+      {visible && (
         <button
           onClick={() => setVisible(false)}
           className="fixed bottom-[50px] right-8 bg-light-gray-bg p-4 rounded-full z-50 drop-shadow-xl/50 cursor-pointer"
@@ -62,39 +55,20 @@ const ChatBox = ({
         </button>
       )}
 
-      {/* Chat Panel */}
       <div
         className={cn(
-          mode === 'full' ? 'fixed inset-0 w-full h-full rounded-none' : `${position} ${width}`,
-          'z-50 transition-all duration-300 ease-in-out transform',
-          visible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-4 pointer-events-none'
+          'fixed bottom-[120px] right-8 w-[340px] max-h-80 z-50 transition-all duration-300 ease-in-out transform',
+          visible
+            ? 'opacity-100 scale-100 translate-y-0'
+            : 'opacity-0 scale-95 translate-y-4 pointer-events-none'
         )}
       >
         <div className="bg-white drop-shadow-2xl rounded-xl overflow-hidden text-sm flex flex-col h-full">
-          {/* Header */}
           <div className="bg-orange-primary p-4 flex justify-between items-center">
             <span className="text-white text-base font-semibold">Chat with Cypher</span>
-            {mode === 'full' && (
-              <button
-                onClick={() => setVisible(false)}
-                className="text-white hover:scale-110 transition"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            )}
           </div>
 
-          {/* Messages */}
-          <div className={cn('flex flex-col gap-2 px-3 py-2 overflow-y-auto bg-[#E5E7EB] flex-1', height)}>
+          <div className="flex flex-col gap-2 px-3 py-2 overflow-y-auto bg-[#E5E7EB] flex-1">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -111,7 +85,6 @@ const ChatBox = ({
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
           <form onSubmit={handleSubmit} className="p-2 bg-[#E5E7EB] text-gray-800">
             <input
               type="text"
