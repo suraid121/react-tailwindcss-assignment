@@ -11,8 +11,6 @@ dist
 dist-ssr
 *.local
 
-
-Documents
 Location
 vercel.json
 
