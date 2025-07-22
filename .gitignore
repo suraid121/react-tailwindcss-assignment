@@ -10,7 +10,7 @@ node_modules
 dist
 dist-ssr
 *.local
-ChatBox
+
 Activities
 Documents
 Location
